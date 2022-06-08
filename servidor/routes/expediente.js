@@ -7,5 +7,9 @@ const expedienteController = require('../controllers/expendienteController');
     console.log('Creando expediente...')
 }) */
 router.post('/',expedienteController.crearExpediente);
+router.get('/',expedienteController.obtenerExpedientes);
+router.put('/:id',expedienteController.actualizarExpediente);
+router.get('/:id',expedienteController.obtenerExpediente);
+router.delete('/:id',expedienteController.eliminarExpediente);
 
 module.exports = router;

@@ -1,13 +1,15 @@
 const express = require('express');
 const conectarDB = require('./config/db.js');
-//const cors = require("cors");
+const cors = require("cors");
 
 const app = express();
 
 //Conectar DB
 conectarDB();
+app.use(cors());
+app.use(express.json())
 app.use('/api/expedientes', require('./routes/expediente'));
-//app.use(cors());
+//
 //app.use(express.json());
 
 /* app.get('/', (req,res)=>{
