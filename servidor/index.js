@@ -9,12 +9,8 @@ conectarDB();
 app.use(cors());
 app.use(express.json())
 app.use('/api/expedientes', require('./routes/expediente'));
-//
-//app.use(express.json());
+app.use('/api/pacientes', require('./routes/paciente'));
 
-/* app.get('/', (req,res)=>{
-    res.send('Hola mundo')
-}) */
 
 app.listen(4000, () => {
     console.log('Servidor corriendo en el puerto 4000')
